@@ -31,15 +31,20 @@ const power = function (num1, num2) {
 
 console.log(power(5, 5));
 
+// factorials function that takes a number as an arguement
 const factorial = function (num) {
-  if (typeof num != "number") {
+  if (typeof num !== "number") {
     console.log("enter a number only");
+    return 0;
   } else if (num <= 0) {
     console.log("enter a number greater than 0");
+    return 0;
   }
-  let result = 1;
+  let result = 1; // accumulator initializaion (the multiplicative identity)
+  // loop for calculating factorials
+  // - this loop multiplies result by every integer from 1 up to num
   for (let i = 1; i <= num; i++) {
-    result *= i;
+    result *= i; // returning the result
   }
   return result;
 };
